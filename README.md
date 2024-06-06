@@ -43,9 +43,12 @@ The Personal Finance Tracker is a command-line application designed to help user
 
 ### Main Functions
 
-- `main()`: Entry point of the application.
-- `add_expense()`:   - The `main()` function serves as the starting point for the Personal Finance Tracker application. It begins by prompting the user for their name and then welcomes them to the program. The function enters an infinite loop, displaying a menu of options that allows the user to add an expense, calculate the total expenses, view all expenses, or exit the program. Based on the user's choice, the appropriate function (`add_expense()`, `calculate_expense()`, `view_expense()`) is called. If the user chooses to exit, the program terminates with a goodbye message.
-- `calculate_expense()`: Calculates and displays the total amount of expenses.
+- `main()`:  The `main()` function serves as the starting point for the Personal Finance Tracker application. It begins by prompting the user for their name and then welcomes them to the program. The function enters an infinite loop, displaying a menu of options that allows the user to add an expense, calculate the total expenses, view all expenses, or exit the program. Based on the user's choice, the appropriate function (`add_expense()`, `calculate_expense()`, `view_expense()`) is called. If the user chooses to exit, the program terminates with a goodbye message.
+  
+- `add_expense()`: This function facilitates the addition of a new expense record to the CSV file. It first prompts the user to specify the CSV file to which the expense will be added. After verifying the validity of the file, the function asks the user to enter the details of the expense, including the purchase description, amount, and date. It uses input validation to ensure the data is correctly formatted. Once validated, the expense data is appended to the specified CSV file. If the file does not already exist, the function creates it and includes a header row. A confirmation message is displayed once the expense is successfully added.
+
+- `calculate_expense()`: This function prompts for a file like the other 2 but this time, after validating using `file_check`, opens the file on readmode. It initializes a counter variable called `amount` to 0 then loops through the list of dictionaries from the reader. The value of each amount for each row key get accumulated to the counter variable then the function prints out the total
+  
 - `view_expense()`: Displays all recorded expenses in a formatted table.
 - `option_check(command)`: Validates the user command input.
 - `file_check(file)`: Validates the CSV file.
