@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-#### Video Demo:  [URL HERE]
+#### Video Demo:  [https://youtu.be/c52tdKC6Phg]
 #### Description:
 The Personal Finance Tracker is a command-line application designed to help users manage their personal expenses. Users can add, view, and calculate their expenses, all stored in a CSV file. This project is an intermediate-level Python application that demonstrates skills in file handling, data processing, user input validation, and automated testing.
 
